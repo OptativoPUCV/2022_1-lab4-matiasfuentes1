@@ -55,8 +55,6 @@ while (map -> buckets [indice] != NULL){
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-
-
 }
 
 HashMap * createMap(long capacity) {
@@ -72,9 +70,6 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
-
-
-
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
@@ -82,17 +77,16 @@ Pair * searchMap(HashMap * map,  char * key) {
 int indice ;
 Pair *aux ; 
 indice = hash(key , map -> capacity); 
+  
+    whail(map -> buckets[indice] != NULL){
 
-if(map -> buckets[indice] != NULL){
-    if(map -> buckets[indice] -> key == key ){
-       
-       aux = map ->buckets[indice];
-
-       return aux;
+        if(map -> buckets[indice] -> key == key ){
+            aux = map ->buckets[indice];
+            return aux;
+        }else{
+           return NULL ;
+        }
     }
-}else{
-    return NULL;
-}
 }
 
 Pair * firstMap(HashMap * map) {

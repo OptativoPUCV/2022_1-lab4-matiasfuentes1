@@ -69,3 +69,23 @@ hashmap.c:96:1: error: control reaches end of non-void function [-Werror=return-
 cc1.exe: all warnings being treated as errors
 Compilation failed
 3888175
+vi.,  8 de abr. de 2022 18:42:54: 
+ hashmap.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:81:5: error: implicit declaration of function 'whail' [-Werror=implicit-function-declaration]
+     whail(map -> buckets[indice] != NULL){
+     ^~~~~
+hashmap.c:81:42: error: expected ';' before '{' token
+     whail(map -> buckets[indice] != NULL){
+                                          ^
+hashmap.c:78:7: error: unused variable 'aux' [-Werror=unused-variable]
+ Pair *aux ;
+       ^~~
+hashmap.c:90:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f6f222c
