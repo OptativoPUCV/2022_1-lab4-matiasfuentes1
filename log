@@ -31,3 +31,30 @@ vi.,  8 de abr. de 2022 18:00:47:
  tests:  5|4
 total_score: 30/70
 8d60e8f
+vi.,  8 de abr. de 2022 18:37:50: 
+ hashmap.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:85:15: error: 'return' with a value, in function returning void [-Werror]
+        return aux;
+               ^~~
+hashmap.c:74:6: note: declared here
+ void eraseMap(HashMap * map,  char * key) {
+      ^~~~~~~~
+hashmap.c:88:12: error: 'return' with a value, in function returning void [-Werror]
+     return NULL;
+            ^~~~
+hashmap.c:74:6: note: declared here
+ void eraseMap(HashMap * map,  char * key) {
+      ^~~~~~~~
+hashmap.c: In function 'searchMap':
+hashmap.c:95:13: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+ int * ret = searchMap(map,key);
+             ^~~~~~~~~
+hashmap.c:95:7: error: unused variable 'ret' [-Werror=unused-variable]
+ int * ret = searchMap(map,key);
+       ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4c3a154
