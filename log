@@ -2,3 +2,20 @@ vi.,  8 de abr. de 2022 17:50:24:
  tests:  0|6
 total_score: 0/70
 8e0c66f
+vi.,  8 de abr. de 2022 17:50:55: 
+ hashmap.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'createMap':
+hashmap.c:58:5: error: implicit declaration of function 'ford' [-Werror=implicit-function-declaration]
+     ford(int i = 0 ; i < capacity; i++){
+     ^~~~
+hashmap.c:58:10: error: expected expression before 'int'
+     ford(int i = 0 ; i < capacity; i++){
+          ^~~
+hashmap.c:58:40: error: expected ';' before '{' token
+     ford(int i = 0 ; i < capacity; i++){
+                                        ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+c0ea46d
