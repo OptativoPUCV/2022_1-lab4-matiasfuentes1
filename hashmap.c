@@ -55,7 +55,7 @@ HashMap * createMap(long capacity) {
     HashMap * crearmaps = (HashMap *) malloc(sizeof(HashMap));
     crearmaps -> buckets = malloc(sizeof(Pair*)*capacity);
     crearmaps -> size = 0;
-    ford(int i = 0 ; i < capacity; i++){
+    for(int i = 0 ; i < capacity; i++){
         crearmaps -> buckets [i] = NULL;
     }
     crearmaps -> capacity = capacity;
