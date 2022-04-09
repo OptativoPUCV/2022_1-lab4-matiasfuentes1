@@ -241,3 +241,14 @@ sá.,  9 de abr. de 2022 18:29:04:
  tests:  6|4
 total_score: 30/70
 0f41e6a
+sá.,  9 de abr. de 2022 18:36:44: 
+ hashmap.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+test.c: In function 'searchMap':
+hashmap.c:91:28: error: 'busqueda' may be used uninitialized in this function [-Werror=maybe-uninitialized]
+             busqueda ->key = map -> buckets[aux] -> key;
+             ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+8be15b2
