@@ -100,3 +100,41 @@ hashmap.c:90:1: error: control reaches end of non-void function [-Werror=return-
 cc1.exe: all warnings being treated as errors
 Compilation failed
 c35b827
+sá.,  9 de abr. de 2022 18:02:05: 
+ hashmap.c | 27 +++++++++++++++++++++++++--
+ 1 file changed, 25 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:101:14: error: too few arguments to function 'hash'
+     indice = hash (key);
+              ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:103:25: error: 'capacity' undeclared (first use in this function)
+     for(int i = 0 ; i < capacity ; i++){
+                         ^~~~~~~~
+hashmap.c:103:25: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:105:20: error: invalid operands to binary == (have 'HashMap {aka struct HashMap}' and 'void *')
+         if(map[aux]== NULL){
+            ~~~~~~~~^~
+hashmap.c:106:20: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+             return aux;
+                    ^~~
+hashmap.c:108:20: error: incompatible type for argument 1 of 'strcmp'
+         if(!strcmp(map[aux],key)){
+                    ^~~
+In file included from test.c:3:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'HashMap {aka struct HashMap}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+In file included from test.c:4:0:
+hashmap.c:109:16: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+         return aux;
+                ^~~
+hashmap.c:112:12: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+     return indice;
+            ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d7a1dec
