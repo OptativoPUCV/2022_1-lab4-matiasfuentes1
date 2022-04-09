@@ -101,7 +101,7 @@ while(map->buckets[i]==NULL){
     i=(i+1)% map->capacity;
 }
 map->capacity = i;
-    return map ->buckets[i];
+    return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
