@@ -96,12 +96,12 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-int i = 0;
-    while(map->buckets[i]==NULL){
-        i=(i+1)% map->capacity;
+int indice = 0;
+    while(map->buckets[indice]==NULL){
+        indice=(indice+1)% map->capacity;
     }
-    map->capacity = i;
-    return map ->buckets[i];
+    map->current = indice;
+    return map ->buckets[indice];
 }
 
 Pair * nextMap(HashMap * map) {
