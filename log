@@ -193,3 +193,9 @@ c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is o
 cc1.exe: all warnings being treated as errors
 Compilation failed
 4e1e00c
+sá.,  9 de abr. de 2022 18:08:15: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 30/70
+f63903b

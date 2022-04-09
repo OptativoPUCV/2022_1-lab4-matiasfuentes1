@@ -105,7 +105,7 @@ Pair * searchMap(HashMap * map,  char * key) {
         if( map -> buckets[aux] == NULL){
             return map->buckets[aux]->value;
         }
-        if(strcmp(map->buckets[aux],key)){
+        if(!strcmp(map->buckets[aux]->key,key)){
         return map->buckets[aux]->value;
         }
     }
