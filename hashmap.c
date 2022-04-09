@@ -88,15 +88,11 @@ Pair * searchMap(HashMap * map,  char * key) {
     for(int i = 0 ; i < map -> capacity ; i++){
         aux = (indice + i) % map -> capacity;
         if( map -> buckets[aux] == NULL){
-            busqueda ->key = map -> buckets[aux] -> key;
-            busqueda ->value = map -> buckets[aux] -> value;
-            return busqueda;
+            return map->buckets[aux]->value;
 
         }
         if(!strcmp(map->buckets[aux]->key,key)){
-            busqueda ->key = map -> buckets[aux] -> key;
-            busqueda ->value = map -> buckets[aux] -> value;
-        return busqueda;
+        return map->buckets[aux]->value;
         }
     }
     return NULL;
