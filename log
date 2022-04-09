@@ -199,3 +199,21 @@ sá.,  9 de abr. de 2022 18:08:15:
  tests:  5|4
 total_score: 30/70
 f63903b
+sá.,  9 de abr. de 2022 18:21:18: 
+ hashmap.c | 29 ++++++++---------------------
+ 1 file changed, 8 insertions(+), 21 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'firstMap':
+hashmap.c:99:5: error: expected identifier or '(' before '=' token
+ int = 0;
+     ^
+hashmap.c:100:20: error: 'i' undeclared (first use in this function)
+ while(map->buckets[i]==NULL){
+                    ^
+hashmap.c:100:20: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:105:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+34773ba

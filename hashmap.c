@@ -70,14 +70,9 @@ HashMap * createMap(long capacity) {
     return crearmaps;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
-   /* int indice = searchMap(map,key);
-    if(key[indice] != NULL && key[indice] != erase){
-        if(!strcmp(key[indice],map)){
-            free(key[indice]);
-            key[indice] = erase;
-        }
-    }*/
+void eraseMap(HashMap * map,  char * key) {  
+
+   //int indice = hash(key,map->capacity);
 
 
 }
@@ -85,18 +80,6 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) {   
 
     int indice ;
-    /*Pair *aux ; 
-    indice = hash(key , map -> capacity); 
-
-    if(map -> buckets[indice] != NULL){
-        if(map -> buckets[indice] -> key == key ){
-         aux -> key = key; 
-         //map ->buckets[indice];
-        return aux;
-        }
-    }else{
-        return NULL;
-    }*/
     int aux;
      indice = hash(key , map -> capacity);
 
@@ -113,8 +96,12 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+int = 0;
+while(map->buckets[i]==NULL){
+    i=(i+1)% map->capacity;
+}
+map->capacity = i;
+    return map ->buckets[i];
 }
 
 Pair * nextMap(HashMap * map) {
