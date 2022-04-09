@@ -98,14 +98,14 @@ Pair * searchMap(HashMap * map,  char * key) {
         return NULL;
     }*/
     int aux;
-    indice = hash (key);
+     indice = hash(key , map -> capacity);
 
-    for(int i = 0 ; i < capacity ; i++){
-        aux = (indice + i)%capacity;
-        if(map[aux]== NULL){
+    for(int i = 0 ; i < map -> capacity ; i++){
+        aux = (indice + i) % map -> capacity;
+        if( map -> buckets[aux] == NULL){
             return aux;
         }
-        if(!strcmp(map[aux],key)){
+        if(!strcmp(map->buckets[aux],key)){
         return aux;
         }
     }
