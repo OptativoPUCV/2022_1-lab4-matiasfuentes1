@@ -163,3 +163,18 @@ hashmap.c:112:12: error: return makes pointer from integer without a cast [-Werr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 f523e0b
+sá.,  9 de abr. de 2022 18:06:52: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:108:20: error: passing argument 1 of 'strcmp' from incompatible pointer type [-Werror=incompatible-pointer-types]
+         if(!strcmp(map->buckets[aux],key)){
+                    ^~~
+In file included from test.c:3:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'Pair * {aka struct Pair *}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+065ea18

@@ -103,13 +103,13 @@ Pair * searchMap(HashMap * map,  char * key) {
     for(int i = 0 ; i < map -> capacity ; i++){
         aux = (indice + i) % map -> capacity;
         if( map -> buckets[aux] == NULL){
-            return aux;
+            return map->buckets[aux]->value;
         }
         if(!strcmp(map->buckets[aux],key)){
-        return aux;
+        return map->buckets[aux]->value;
         }
     }
-    return indice;
+    return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
