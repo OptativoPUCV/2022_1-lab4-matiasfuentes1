@@ -263,3 +263,9 @@ hashmap.c:84:12: error: unused variable 'busqueda' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 9dabaf8
+sá.,  9 de abr. de 2022 18:38:01: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 30/70
+bf97b85
