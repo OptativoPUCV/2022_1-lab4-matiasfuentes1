@@ -91,10 +91,10 @@ if(is_equal (map -> buckets [indice] -> key, key)){
         )
     }
     
-    }
+    }*/
 
 
-}*/
+}
 
 Pair * searchMap(HashMap * map,  char * key) {   
 
@@ -140,7 +140,7 @@ Pair * nextMap(HashMap * map) {
     }
     map -> current = indice;
     return map -> buckets[indice];
-    
+
     if(indice == 0){
         return NULL;
     }
