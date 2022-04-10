@@ -283,3 +283,9 @@ hashmap.c:93:33: error: return from incompatible pointer type [-Werror=incompati
 cc1.exe: all warnings being treated as errors
 Compilation failed
 18e27be
+do., 10 de abr. de 2022 12:30:18: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  6|4
+total_score: 30/70
+15f46e5
