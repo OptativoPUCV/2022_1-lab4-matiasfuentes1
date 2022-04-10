@@ -295,3 +295,16 @@ do., 10 de abr. de 2022 13:22:11:
  tests:  7|4
 total_score: 30/70
 828c213
+do., 10 de abr. de 2022 13:35:06: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:91:32: error: invalid type argument of '->' (have 'long int')
+             return map->current->aux;
+                                ^~
+hashmap.c:95:28: error: invalid type argument of '->' (have 'long int')
+         return map->current->aux;
+                            ^~
+Compilation failed
+6cd0877
