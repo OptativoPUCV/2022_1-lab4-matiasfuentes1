@@ -324,3 +324,20 @@ hashmap.c:98:24: error: invalid type argument of '->' (have 'long int')
                         ^~
 Compilation failed
 bfcb324
+do., 10 de abr. de 2022 13:37:13: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:90:34: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+             return map ->current = aux;
+                    ~~~~~~~~~~~~~~^~~~~
+hashmap.c:94:30: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+         return map ->current = aux;
+                ~~~~~~~~~~~~~~^~~~~
+hashmap.c:98:25: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+     return map->current = aux;
+            ~~~~~~~~~~~~~^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f92479f
