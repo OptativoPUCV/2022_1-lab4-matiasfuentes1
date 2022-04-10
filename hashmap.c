@@ -72,7 +72,22 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {  
 
-   //int indice = hash(key,map->capacity);
+   int indice;
+   indice = hash(key , map -> capacity);
+if(is_equal (map -> buckets [indice] -> key, key)){
+     map -> size--;
+     map -> buckets[indice] -> key = NULL;
+}else{
+    while(map -> buckets[indice] != NULL && is_equal(map -> buckets[indice]->key,key) == 0){
+        indice = (indice + 1) % map -> capacity;
+    }
+    if (is_equal(map -> buckets[indice]->key,key))
+    {
+        map -> size--;
+        map -> buckets[indice] -> key = NULL;
+    }
+    
+}
 
 
 }
@@ -112,13 +127,13 @@ Pair * nextMap(HashMap * map) {
 
     int indice;
     indice = map -> current;
-    indice = (indice+1) % map -> capacity;
+    indice = (indice + 1) % map -> capacity;
     if(map -> current == map -> capacity){
-    return NULL;
+        return NULL;
     }
-    while(map -> buckets[indice] == NULL || map -> buckets[indice] -> key== NULL){
+    while(map -> buckets[indice] == NULL || map -> buckets[indice] -> key == NULL){
         indice = (indice) % map -> current; 
     }
-    map->current = indice;
+    map -> current = indice;
     return map -> buckets[indice];
 }
