@@ -110,5 +110,15 @@ int indice = 0;
 
 Pair * nextMap(HashMap * map) {
 
+    int indice;
+    indice = map -> current;
+    indice = (indice+1) % map -> capacity;
+    if(map -> current == map -> capacity){
     return NULL;
+    }
+    while(map -> buckets[indice] == NULL || map -> buckets[indice] -> key== NULL){
+        indice = (indice) % map -> current; 
+    }
+    map->current = indice;
+    return map -> buckets[indice];
 }
