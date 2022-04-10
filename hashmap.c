@@ -81,17 +81,16 @@ Pair * searchMap(HashMap * map,  char * key) {
 
     int indice ;
     int aux;
-   
-
+    
      indice = hash(key , map -> capacity);
 
     for(int i = 0 ; i < map -> capacity ; i++){
         aux = (indice + i) % map -> capacity;
         if( map -> buckets[aux] == NULL){
-            return map->buckets[aux]->value;
+            return map->buckets[aux]->key;
         }
         if(!strcmp(map->buckets[aux]->key,key)){
-        return map->buckets[aux]->value;
+        return map->buckets[aux]->key;
         }
     }
     return NULL;

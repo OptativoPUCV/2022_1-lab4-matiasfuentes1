@@ -269,3 +269,17 @@ sá.,  9 de abr. de 2022 18:38:01:
  tests:  6|4
 total_score: 30/70
 bf97b85
+do., 10 de abr. de 2022 12:30:05: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:90:37: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+             return map->buckets[aux]->key;
+                    ~~~~~~~~~~~~~~~~~^~~~~
+hashmap.c:93:33: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+         return map->buckets[aux]->key;
+                ~~~~~~~~~~~~~~~~~^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+18e27be
