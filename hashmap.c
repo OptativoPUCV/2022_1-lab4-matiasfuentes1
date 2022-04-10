@@ -87,10 +87,10 @@ Pair * searchMap(HashMap * map,  char * key) {
     for(int i = 0 ; i < map -> capacity ; i++){
         aux = (indice + i) % map -> capacity;
         if( map -> buckets[aux] == NULL){
-            return map->buckets[aux]->value;
+            return map->buckets[aux];
         }
         if(!strcmp(map->buckets[aux]->key,key)){
-        return map->buckets[aux]->value;
+        return map->buckets[aux];
         }
     }
     return NULL;
