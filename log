@@ -503,3 +503,16 @@ do., 10 de abr. de 2022 20:51:38:
  tests:  11|3
 total_score: 40/70
 c1b9b9f
+do., 10 de abr. de 2022 20:54:01: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:90:13: error: expected expression before 'return'
+             return NULL;
+             ^~~~~~
+hashmap.c:92:5: error: expected ';' before '}' token
+     }
+     ^
+Compilation failed
+abae8bb
