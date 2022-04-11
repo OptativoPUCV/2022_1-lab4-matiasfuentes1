@@ -85,7 +85,7 @@ void eraseMap(HashMap * map,  char * key) {
             map -> size--;
             map -> buckets[indice] -> key = NULL;
             }
-             indice = (indice + i) % map -> capacity;
+             indice = (indice + 1) % map -> capacity;
         }
 
     }
