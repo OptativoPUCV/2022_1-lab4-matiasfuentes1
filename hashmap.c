@@ -88,7 +88,7 @@ if(is_equal (map -> buckets [indice] -> key, key)){
         }else{
             
             if(map -> buckets[indice] == NULL){
-                return ;
+                return 0;
             }
         }
        

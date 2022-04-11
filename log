@@ -540,3 +540,17 @@ do., 10 de abr. de 2022 22:48:45:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 e695913
+do., 10 de abr. de 2022 22:49:04: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:91:24: error: 'return' with a value, in function returning void [-Werror]
+                 return 0;
+                        ^
+hashmap.c:73:6: note: declared here
+ void eraseMap(HashMap * map,  char * key) {
+      ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+04638ef
