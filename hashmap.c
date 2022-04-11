@@ -87,13 +87,14 @@ if(is_equal (map -> buckets [indice] -> key, key)){
             map -> buckets[indice] -> key = NULL;
         }else{
             
-            if(map -> buckets[indice] == NULL){
-                return 0;
-            }
+            
         }
        
     }
-
+    
+    if(map -> buckets[indice] == NULL){
+                return NULL;
+            }
 
 }
 
@@ -139,7 +140,7 @@ Pair * nextMap(HashMap * map) {
     while(map -> buckets[indice] == NULL || map -> buckets[indice] -> key == NULL){
         indice = (indice+1) % map -> capacity; 
 
-         map -> current = indice;
+        map -> current = indice;
         return map -> buckets[indice];
     }
    
