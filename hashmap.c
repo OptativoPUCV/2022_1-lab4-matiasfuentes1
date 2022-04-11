@@ -137,12 +137,12 @@ Pair * nextMap(HashMap * map) {
     }
     while(map -> buckets[indice] == NULL || map -> buckets[indice] -> key == NULL){
         indice = (indice+1) % map -> capacity; 
-        return map -> current = indice;
+        map -> current = indice;
         return map -> buckets[indice];
     }
    
-    map -> current = indice;
-    return map -> buckets[indice];
-
+    //map -> current = indice;
+    //return map -> buckets[indice];
+      return NULL;
     
 }
