@@ -631,3 +631,21 @@ hashmap.c:61:19: error: assignment from incompatible pointer type [-Werror=incom
 cc1.exe: all warnings being treated as errors
 Compilation failed
 43a6b93
+do., 10 de abr. de 2022 23:40:58: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'enlarge':
+hashmap.c:59:23: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+     Pair ** arreglo = map -> current;
+                       ^~~
+hashmap.c:61:29: error: too few arguments to function 'calloc'
+     map -> buckets = (Pair*)calloc(sizeof(Pair)*map->capacity);
+                             ^~~~~~
+In file included from test.c:2:0:
+c:\mingw\include\stdlib.h:484:40: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  void *calloc (size_t, size_t) __MINGW_ATTRIB_MALLOC;
+                                        ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+5261687
