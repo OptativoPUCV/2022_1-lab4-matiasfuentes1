@@ -58,11 +58,11 @@ void enlarge(HashMap * map) {
     int indice = map->capacity;
     Pair ** arreglo = map -> current;
     map -> capacity *=2;
-    map -> buckets=(Pair*)malloc(sizaof(Pair)*map->capacity);
+    map -> buckets=(Pair*)malloc(sizeof(Pair)*map->capacity);
     map -> size = 0;
         for(int i = 0 ; i < indice ; i++){
             if(arreglo[i]!=NULL){
-                insertMap(map,arreglo[i]->key-arreglo[i]->value);
+                insertMap(map,arreglo[i]->key,arreglo[i]->value);
             }
         }
     free(arreglo);
