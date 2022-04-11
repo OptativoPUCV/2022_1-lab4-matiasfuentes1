@@ -85,11 +85,12 @@ if(is_equal (map -> buckets [indice] -> key, key)){
         {
             map -> size--;
             map -> buckets[indice] -> key = NULL;
-        }else{
+        }/*else{
+            
             if(map -> buckets[indice] == NULL){
                 return NULL;
             }
-        }
+        }*/
     
     }
 
