@@ -568,3 +568,14 @@ hashmap.c:73:6: note: declared here
 cc1.exe: all warnings being treated as errors
 Compilation failed
 f26bded
+do., 10 de abr. de 2022 23:14:35: 
+ hashmap.c | 12 +++---------
+ 1 file changed, 3 insertions(+), 9 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:88:33: error: 'i' undeclared (first use in this function)
+              indice = (indice + i) % map -> capacity;
+                                 ^
+hashmap.c:88:33: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+ff6fa05
