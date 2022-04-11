@@ -426,3 +426,12 @@ do., 10 de abr. de 2022 19:04:09:
  tests:  9|3
 total_score: 40/70
 44ec02e
+do., 10 de abr. de 2022 20:35:12: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+hashmap.c:97:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+Compilation failed
+a7276f4
