@@ -55,8 +55,10 @@ while (map -> buckets [indice] != NULL){
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-    int indice = map->capacity;
-    Pair ** arreglo = map -> current;
+   //============================================================
+   
+    int indice = map -> capacity;
+    Pair ** arreglo = map -> buckets;
     map -> capacity *=2;
     map -> buckets = (Pair*)malloc(sizeof(Pair)*map->capacity);
     map -> size = 0;
