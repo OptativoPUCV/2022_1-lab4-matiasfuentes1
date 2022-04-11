@@ -516,3 +516,17 @@ hashmap.c:92:5: error: expected ';' before '}' token
      ^
 Compilation failed
 abae8bb
+do., 10 de abr. de 2022 20:54:55: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'eraseMap':
+hashmap.c:90:24: error: 'return' with a value, in function returning void [-Werror]
+                 return NULL;
+                        ^~~~
+hashmap.c:73:6: note: declared here
+ void eraseMap(HashMap * map,  char * key) {
+      ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+b8bbbf2

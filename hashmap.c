@@ -81,15 +81,15 @@ if(is_equal (map -> buckets [indice] -> key, key)){
     while(map -> buckets[indice] != NULL && is_equal(map -> buckets[indice]->key,key) == 0){
         indice = (indice + 1) % map -> capacity;
     }
-    if (is_equal(map -> buckets[indice]->key,key))
-    {
-        map -> size--;
-        map -> buckets[indice] -> key = NULL;
-    }else{
-        if(map -> buckets[indice] == NULL)(
-            return NULL;
-        )
-    }
+        if (is_equal(map -> buckets[indice]->key,key))
+        {
+            map -> size--;
+            map -> buckets[indice] -> key = NULL;
+        }else{
+            if(map -> buckets[indice] == NULL){
+                return NULL;
+            }
+        }
     
     }
 
