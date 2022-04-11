@@ -130,7 +130,7 @@ int indice = 0;
 Pair * nextMap(HashMap * map) {
 
     int indice;
-    indice = map -> (current + 1);
+    indice = map -> current + 1;
     indice = (indice + 1) % map -> capacity;
     if(map -> current == map -> capacity){
         return NULL;

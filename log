@@ -451,3 +451,9 @@ hashmap.c:133:21: error: expected identifier before '(' token
                      ^
 Compilation failed
 8e6e70d
+do., 10 de abr. de 2022 20:37:28: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|3
+total_score: 40/70
+9a88c04
